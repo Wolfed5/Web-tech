@@ -47,6 +47,34 @@ function DocumentLoad()
    "<br \/>Последнее изменение:"+date);
    
 
+};
+
+function Aforizm()
+{
+    var days = [
+        'Работать начну во вторник',
+        'День трудоголика начался',
+        'Половина минала',
+        'Запара идет к своему нелогичному концу',
+        'Домой пора',
+        'Спим днем',
+        'Не спим ночью'
+      ];
+      var rand = Math.floor(Math.random() * days.length);
+
+   document.write("Афоризм: "+days[rand]);
+   
+
+}
+
+function info()
+{
+  const navigatorObj = window.navigator;
+  document.write("Характеристики браузера"+
+                 "<br \/>Имя:" +navigatorObj.appName+
+                 "<br \/>Версия:"+navigatorObj.appVersion+
+                 "<br \/>Заголовок:"+navigatorObj.userAgent);
+
 }
 
 
