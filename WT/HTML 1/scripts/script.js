@@ -57,20 +57,35 @@ function drawShape() {
             function createImage1() {
                 var ctx = document.getElementById('mycanvas1').getContext('2d');
                 var x = 0;
-                ctx.save();
                 
                 function animation() {
                      
                      ctx.clearRect(0,0, 1000, 1000);
+
+                     ctx.beginPath();
+                     ctx.fill();
+                     ctx.beginPath();
+                     ctx.fillStyle = 'black';
+                     ctx.arc(100, 40, 25, x, Math.PI/2+x);
+                     ctx.fill();
+                     ctx.save(3);
+
+                   //  ctx.fillRect(x, 10, 10, 10);
+                     ctx.restore(3);
+
+                     ctx.beginPath();
+                     ctx.fill();
+                     ctx.beginPath();
+                     ctx.fillStyle = 'red';
+                     ctx.arc(100, 40, 22, 0, Math.PI*2);
+                     ctx.fill();
+
+
+                     x = x+0.25;
                      
-                     ctx.fillRect(x, 10, 10, 10);
-                     
-                     x = x+1;
-                     ctx.restore();
                      if (x > 999) { x = 0;}
-                     setTimeout(animation, 50)
+                     setTimeout(animation, 100)
                    //  if(x<1000) 
-                     ctx.restore();
                                                         }
             animation();
             
