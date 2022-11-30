@@ -39,17 +39,25 @@ form.ssr
             <table>
                 <tr>
                     <td colspan="2">
-                        <A HREF=http://www.newmail.ru 
-                        onMouseOver="up()" 
-                        onMouseOut="down()"> 
-                        <IMG name="img1" onload="animation()" BORDER=0>
-                        </A>
+                        <IMG name="img1" onMouseOver="up()" 
+                        onMouseOut="down()"  BORDER=0 width="500" height="500">
                     </td>
                 </tr>
                         <tr>
-                        <td ><button>Предыдущее</button></td>
-                        <td ><button>Следующее</button></td>
+                                <td colspan="2">
+                                <select name="item" onChange="LoadImg()">
+                                <Option value="" selected>Ничего</Option>    
+                                <Option value="step.bmp">step.bmp</Option>
+                                <Option value="scn.bmp">scn.bmp</Option>    
+                                <Option value="cdb.bmp">cdb.bmp</Option>
+                                </select>
+                                </td>
+                                        
                         </tr>
+                        <tr>
+                                <td ><button>Предыдущее</button></td>
+                                <td ><button>Следующее</button></td>
+                                </tr>
             </table>
     </body>
 </html>
