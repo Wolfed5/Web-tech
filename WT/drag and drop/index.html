@@ -9,8 +9,9 @@
 
 .element {
 border: 2px solid black;
-height: 50px;
-width: 50px;
+border-radius: 6px 10px 6px 10px;
+height: 25 px;
+width: 75x;
 margin-left:20px;
 margin-bottom: 10px;
 text-align:center;
@@ -21,7 +22,7 @@ text-align:center;
 border: 2px solid red;
 height: 200px;
 width: 100px;
-float:left;
+float:center;
 margin: 50px;
 }
 
@@ -30,31 +31,67 @@ margin: 50px;
 
 
 <body>
-  <div id="source" class="conteiner" ondragenter="return dragEnter(event)"
+  <table border="5px">
+    <tr>
+      <td>
+         <p>Варианты</p>
+      </td>
+      <td>
+         <p>Птицы</p>
+      </td>
+      <td>
+         <p>Рыбы</p>
+      </td>
+      <td>
+         <p>Приматы</p>
+      </td>
+    </tr>
+    <tr>
 
-  ondrop="dragDrop(event)" ondragover="dragOver(event)">
+   <td>
+  <div id="source1" class="conteiner"
+
+  ondrop="dragDrop(event)" >
   
   <div id="firstDragElement" class="element" 
   ondragstart="dragStart(event)" ondragend="return dragEnd(event)" draggable="true">
   
-  Text 1</div>
+  Журавль</div>
   
   <div id="secondDragElement" class="element" 
   ondragstart="dragStart(event)" ondragend="return dragEnd(event)" draggable="true">
   
-  Text 2</div>
+  Бабуин</div>
   
   <div id="thirdDragElement" class="element" 
   ondragstart="dragStart(event)" ondragend="return dragEnd(event)" draggable="true">
   
-  Text 3</div>
+  Карп</div>
   
   </div>
-  
+</td> 
+<td>
   <div id="target" class="conteiner" ondragenter="return dragEnter(event)"
   
-  ondrop="dragDrop(event)" ondragover="dragOver(event)">
+  ondrop="dragDrop(event)" ondragover="dragOver1(event)">
   
   </div>
+</td>
+<td>
+  <div id="target" class="conteiner" ondragenter="return dragEnter(event)"
+  
+  ondrop="dragDrop(event)" ondragover="dragOver2(event)">
+  
+  </div>
+</td>
+<td>
+  <div id="target" class="conteiner" ondragenter="return dragEnter(event)"
+  
+  ondrop="dragDrop(event)" ondragover="dragOver3(event)">
+  
+  </div>
+</td>
+</tr>
+</table>
 </body>
 </html>
