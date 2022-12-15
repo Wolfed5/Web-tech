@@ -3,7 +3,7 @@
     <head>
     <title>Регистрация участников конференции</title>
       <meta charset="utf-8">
-      <script type="text/javascript" src="script1.js"></script>
+      <script type="text/javascript" src="script.js"></script>
 
 </head>
 <style>
@@ -380,93 +380,84 @@ body{
 
 
 </style>
-<script>
-                    function myFunction() {
-                        var x = document.getElementById("Sol");
-                        if (x.style.display === "block") {
-                          x.style.display = "none";
-                        } else {
-                          x.style.display = "block";
-                        }
-                    }
-</script>
+
     <body>
         <div id="header">
             <h1>Регистрация участников конференции</h1>
         </div>
 
-   
+                    <form method="post">
                        <table class="ssr">
                             <tr>
                                  <td><label class="notefield">ФИО (полностью)
                                       </label></td>
                                  <td colspan=2>
-                                      <input id="abbr" type="text" required pattern="^[А-Яа-яЁё\s]+$"
-                                           class="notefield"></input>
+                                      <label id="sl1"><input id="name" name="name" type="text" required pattern="^[А-Яа-яЁё\s]+$"
+                                           class="notefield"></input></label>
                                  </td>
                             </tr>
                             <tr>
                                 <td><label class="notefield">Телефон
                                      </label></td>
                                 <td colspan=2>
-                                     <input id="phone" type="tel" class="notefield" value="+7"
+                                    <label id="sl2"><input id="phone" name="phone" type="tel" class="notefield" value="+7"
                                      required   pattern="\+\7\d{3}\d{3}\d{4}"  name="phone" data-ng-minlength="12" 
-                                          maxlength="12" ></input>
+                                          maxlength="12" ></input></label>
                                 </td>
                            </tr>
                            <tr>
                             <td><label class="notefield">Адрес электронной почты
                                  </label></td>
                             <td colspan=2>
-                                 <input id="notename" type="email"
-                                 required   class="notefield"></input>
+                                <label id="sl3"><input id="Email" type="email" name="Email"
+                                 required   class="notefield"></input></label>
                             </td>
                        </tr>
                        <tr>
                         <td><label class="notefield">Список секций
                              </label></td>
                         <td colspan=2>
-                             <select id="notename" type="text" required
+                            <label id="sl4"> <select id="Lesson" type="text" required name="Lesson"
                                   class="notefield">
                                   <option value=""></option>
                                   <option value="MT">математика</option>
                                   <option value="FZ">физика</option>
                                   <option value="IT">информатика</option>
-                                </select>
+                                </select></label>
                         </td>
                    </tr>
                    <tr>
                     <td><label class="notefield">дата рождения
                          </label></td>
                     <td colspan=2>
-                         <input id="notename" type="date"
-                              class="notefield"></input>
+                        <label id="sl5"><input id="datarog" name="daterog" type="date"
+                              class="notefield"></input></label>
                     </td>
                </tr>
                <tr>
                 <td><label class="notefield">доклад
                      </label></td>
-                <td colspan=2>
+                <td >
                     <div class="reating-arkows zatujgdsanuk">
-                        <input id="e" type="checkbox" onchange="myFunction()" required>
+                        <input id="e" type="checkbox"  onchange="myFunction()">
                         <label for="e">
-                        <div class="trianglesusing" data-checked="да" data-unchecked="нет" onchange="addDoclad();"></div>
+                        <div class="trianglesusing" data-checked="да" data-unchecked="нет"></div>
                         </label>
                 </td>
                 <td>
-                        <input id="Sol" hidden type="text" class="notefield"></input>
+                    <label id="sl6">
+                    <input id="Sol" hidden type="text" class="notefield" name="Sol"></input>
+                    </label>
                 </td>
            </tr>
    
                             <tr>
                                 <td></td>
-                                <td class="notebtn">
-                                    <button id="save" type="submit" onclick="saveNote(); ">
-                                        Отправить
-                                    </button></td>
+                                <td>
+                                    <input type="button" value="Отправить" onclick="addreg()"/></td>
                                 </tr>
                             </table>
-   
+                          </form>
                 <div id="footer">
                         <p class="footertext">2022 г.</p>
                 </div>
